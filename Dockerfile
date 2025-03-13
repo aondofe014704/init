@@ -1,5 +1,6 @@
-# Use the official Node.js image for Windows as a base
-FROM mcr.microsoft.com/windows/node:20
+FROM mcr.microsoft.com/windows/servercore:ltsc2022
+RUN curl -o node-setup.msi https://nodejs.org/dist/v20.0.0/node-v20.0.0-x64.msi && msiexec /i node-setup.msi /quiet
+
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
