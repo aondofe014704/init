@@ -1,6 +1,5 @@
-# Use the official Node.js image as a base
-FROM node:20
-
+# Use the official Node.js image for Windows as a base
+FROM mcr.microsoft.com/windows/node:20
 
 # Set the working directory in the container
 WORKDIR /usr/src/app
